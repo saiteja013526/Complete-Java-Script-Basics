@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors.</title>
+  </head>
+  <body>
+    <p>
+      Rock Paper Scissors.
+    </p>
+    <button onclick="
+      let randomNumber=Math.random(); 
+      console.log(randomNumber);
+
+      let computerMove = '';
+
+      if(randomNumber >=0 && randomNumber< 1/3){
+        computerMove='rock';
+      }else if(randomNumber>= 1/3 && randomNumber < 2/3){
+        computerMove = 'paper';
+      }else if (randomNumber >= 2/3 && randomNumber < 1){
+        computerMove = 'Scissors';
+      }
+      let result = '';
+      if(computerMove === 'rock'){
+        result = `it's a Tie.`;
+      }else if(computerMove === 'paper'){
+        result = 'You loose.';
+      }else if(computerMove==='Scissors'){
+        result = 'You win.';
+      }
+      alert(`You picked Rock, System picked ${computerMove}. ${result} `);
+
+    ">Rock</button>
+
+    <button onclick="
+      let r2 =Math.random();
+      let comMove='';
+      if(r2 >=0 && r2<1/3){
+        comMove='rock';
+      }else if(r2 >=1/3 && r2<2/3){
+        comMove='paper';
+      }else if(r2 >=2/3&& r2<1){
+        comMove='scossors';
+      }   
+      let reslt2='';
+      if(comMove === 'rock'){
+        result2 = `You Win.`;
+      }else if(comMove === 'paper'){
+        result2 = `it's a Tie`;
+      }else if(comMove==='Scissors'){
+        result2 = 'You loose.';
+      }
+      alert(`You picked Paper, System picked ${comMove}. ${result2} `);
+ 
+    ">Paper</button>
+
+    <button  onclick="
+      let r3 =Math.random();
+      console.log(r3);
+      let comMove2='';
+      if(r3 >=0 && r3<1/3){
+        comMove2='rock';
+      }else if(r3 >=1/3 && r3<2/3){
+        comMove2='paper';
+      }else if(r3 >=2/3&& r3<1){
+        comMove2='scssors';
+      }   
+      let reslt3='';
+      if(comMove2 === 'rock'){
+        result3 = `You loose.`;
+      }else if(comMove2 === 'paper'){
+        result3 = `You win`;
+      }else if(comMove2==='Scissors'){
+        result3 = `It's a Tie`;
+      }
+      alert(`You picked Scissors, System picked ${comMove2}. ${result3} `);
+">Scissors</button>
+    
+  </body>
+</html>
