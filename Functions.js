@@ -4,7 +4,7 @@ Rock Paper and Scissors game using simple functions to have a better understandi
 in the 07-Rock-Paper-Scissors.html I made a basic interactive webpage to play the Rock Paper Scissors.
 */ 
 
-let playersMove = 'rock';
+let playersMove = 'paper';
 
 function playGame(playersMove){
   const computerMove = pickComputerMove();
