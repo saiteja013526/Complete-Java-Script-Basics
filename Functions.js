@@ -20,7 +20,7 @@ function playGame(playersMove){
     if(computerMove === 'rock'){
     result='tie.';
     }else if(computerMove === 'paper'){
-      result = 'You Loose.';
+      result = 'You Loose.'; 
     }else if(computerMove === 'scissors'){
       result = 'You Win.';
     }
@@ -48,7 +48,7 @@ function playGame(playersMove){
     }
   }
 
-  
+
   localStorage.setItem('score', JSON.stringify(score));
   console.log(`You Picked ${playersMove}, computer move is ${computerMove}. ${result}
 wins: ${score.wins}, losses: ${score.losses}, tie: ${score.tie}`);
