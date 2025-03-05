@@ -5,6 +5,11 @@ in the 07-Rock-Paper-Scissors.html I made a basic interactive webpage to play th
 */ 
 
 let playersMove = 'paper';
+let score = JSON.parse(localStorage.getItem('score')) ||  {
+  wins: 0,
+  losses: 0,
+  tie: 0
+};
 
 function playGame(playersMove){
   const computerMove = pickComputerMove();
@@ -13,7 +18,7 @@ function playGame(playersMove){
    //for rock
   if(playersMove ==='rock'){
     if(computerMove === 'rock'){
-    result='Tie.';
+    result='tie.';
     }else if(computerMove === 'paper'){
       result = 'You Loose.';
     }else if(computerMove === 'scissors'){
@@ -26,7 +31,7 @@ function playGame(playersMove){
     if(computerMove === 'rock'){
     result='You Win.';
     }else if(computerMove === 'paper'){
-      result = 'Tie.';
+      result = 'tie.';
     }else if(computerMove === 'scissors'){
       result = 'You Loose.';
     }
@@ -39,11 +44,14 @@ function playGame(playersMove){
     }else if(computerMove === 'paper'){
       result = 'You Win.';
     }else if(computerMove === 'scissors'){
-      result = 'Tie.';
+      result = 'tie.';
     }
   }
 
-  console.log(`You Picked ${playersMove}, computer move is ${computerMove}. ${result}`);
+  
+  localStorage.setItem('score', JSON.stringify(score));
+  console.log(`You Picked ${playersMove}, computer move is ${computerMove}. ${result}
+wins: ${score.wins}, losses: ${score.losses}, tie: ${score.tie}`);
 
 
 }
