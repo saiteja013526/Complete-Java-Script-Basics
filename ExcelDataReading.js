@@ -31,18 +31,19 @@ const reader = require('xlsx');
 const File = reader.readFile('./Names.xlsx');
 let data =[]; //taking an empty array
 
-const sheets = file.SheetNames;   //--> this prints an array in which there will be sheet names.
+const sheets = File.SheetNames;   //--> this prints an array in which there will be sheet names.
 //console.log(sheets);  // [ 'sheet 1', 'sheet 2' ]   
 
 
 
 
-for(let i = 0; i < sheets.length-1; i++){
+for(let i = 0; i < sheets.length; i++){
   const temp = reader.utils.sheet_to_json(File.Sheets[File.SheetNames[i]])
-  temp.forEach((res) => {
-    data.push(res)
-  })
+  temp.forEach((res) =>data.push(res))
 
 }
 console.log(data);
+
+
+
 

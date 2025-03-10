@@ -1,0 +1,25 @@
+{
+  "name": "complete-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Classes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saiteja013526/Complete-Java-Script-Basics.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saiteja013526/Complete-Java-Script-Basics/issues"
+  },
+  "homepage": "https://github.com/saiteja013526/Complete-Java-Script-Basics#readme",
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "express": "^4.21.2",
+    "xlsx": "^0.18.5"
+  }
+}
